@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo de movimientos</title>
+        <script>
+            function httpGet(theUrl){
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+                xmlHttp.send( null );
+                return xmlHttp.responseText;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Demo de movimientos</h1>
+        <h2>Velocidades</h2>
+        <ul>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/v/baja')">Baja</button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/v/media')">Media</button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/v/alta')">Alta</button></li>
+        </ul>
+
+        <h2>Movimientos</h2>
+        <ul>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/f')">Forward</button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/b')">Backward</button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/s')">Stop</button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/l')">Left</button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/l2')">Left<sup>2</sup></button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/r')">Right</button></li>
+            <li><button onclick="httpGet('http://pi-chirimoya:5000/m/r2')">Right<sup>2</sup></button></li>
+        </ul>
+    </body>
+</html>
+
+
+
+
